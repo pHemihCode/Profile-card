@@ -1,0 +1,164 @@
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap);
+@import '_variables';
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background-color: $bg;
+    overflow:hidden;
+    max-width:100%;
+    height:100vh;
+    font-family:$myfont;
+}
+.image-top{
+   position:absolute;
+   top:-70%;
+   left:-16%;
+}
+.image-bottom{
+   position: absolute;
+   bottom:-90%;
+   right:-15%;
+}
+.container{
+    z-index:2;
+    position:absolute;
+    background-color:$white;
+    width:25%;
+    height:55%;
+    margin:10em 37em;
+    border-radius:1em;
+    border:none;
+    background-image: url("images/bg-pattern-card.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .card-image{
+        position:absolute;
+        top:24%;
+        left:37%;
+       img{
+           border-radius:10em;
+           border:7px solid white;
+           width:100%;
+       }
+    }
+    .name {
+        margin:14em 0em;
+        text-align:center;
+        h2{
+            font-size:$myfontsize*1.2;
+            color:$maintext;
+            font-weight:bolder;
+            margin-bottom:-1em;
+            strong{
+                color:$Dark;
+                padding-left:0.3em;
+            }
+          }
+          h3{
+             padding-top:2em;
+             font-size:$myfontsize - 0.1;
+             color:$Dark;
+          }
+        }
+        .line{
+            width:100%;
+            height:1px;
+            background-color:rgb(202, 199, 199);
+            position:absolute;
+            top:77%;
+        }
+        .flex-container{
+            display:flex;
+            justify-content:flex-end;
+            flex-direction:row;
+            position:absolute;
+            text-align:center;
+            top:85%;
+            left:6%;
+            h1{
+                font-size:$myfontsize;
+                font-weight:bolder;
+                color:$maintext;
+            }
+            h4{
+                color:$Dark;
+                font-size:$myfontsize - 0.3;
+            }
+            .flex-1{
+                margin:0 3em;
+            }
+            .flex-3{
+                margin:0 3em;
+            }
+            
+        }
+}
+@media screen and (max-width:1440px) {
+    .image-top{
+        position:absolute;
+        top:-60%;
+        left:-16%;
+     }
+     .image-bottom{
+        position: absolute;
+        bottom:-85%;
+        right:-15%;
+     }
+     .container{
+        width:28%;
+        height:53%;
+        margin:11em 37em;
+        .card-image{
+            position:absolute;
+            top:24%;
+            left:37%;
+           img{
+               border-radius:10em;
+               border:7px solid white;
+               width:100%;
+           }
+     }
+     .name {
+        margin:15em 0em;
+        text-align:center;
+     }
+     .flex-container{
+         left:10%;
+     }
+}
+}
+@media screen and (max-width:375px){
+
+    .image-top{
+     display:none;
+       top:50%;
+       left:-90%;
+       img{
+           width:100%;
+           height:10%;
+       }
+    }
+    .image-bottom{
+       display: none;
+    }
+    .container{
+        margin:6em 1.4em;
+        width:88%;
+        height:67%;
+        .card-image{
+            left:34%;
+            top:20%;
+        }
+        .name {
+            margin:13em 0em;
+            text-align:center;
+    }
+    .flex-container{
+        left:0;
+    }
+}
+}
